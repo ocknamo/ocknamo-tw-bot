@@ -5,15 +5,21 @@
 //   一定時間ごとにadblogから取得したアドレスをつぶやくbot
 // 
 'use strict';
-const adblog = require('adblog');
+const urls = [
+	'おっぱい',
+	'おっぱお'
+]
 // 定期処理するオブジェクトを宣言
 var CronJob = require('cron').CronJob;
 
+function url(){
+	return urls[Math.floor(Math.random()*urls.length)];
+}
 module.exports = (robot) => {
 // 定期実行時に呼ばれるメソッド
 //var job = new CronJob('0 0 0,3,6,9,12,15,18,21 * * *', function() {
 var job = new CronJob('0 * * * * *', function() {
-    robot.send('ocknamo_tw_bot', 'BOTちゃん' + adblog.url());
+    robot.send('ocknamo_tw_bot', 'BOTちゃん' + url());
   }, null, true, 'Asia/Tokyo');
   job.start();
 };
