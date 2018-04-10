@@ -11,7 +11,8 @@ var CronJob = require('cron').CronJob;
 
 module.exports = (robot) => {
 // 定期実行時に呼ばれるメソッド
-var job = new CronJob('0 0 0,3,6,9,12,15,18,21 * * *', function() {
+//var job = new CronJob('0 0 0,3,6,9,12,15,18,21 * * *', function() {
+var job = new CronJob('0 * * * * *', function() {
     robot.send('ocknamo_tw_bot', 'BOTちゃん' + adblog.url());
   }, null, true, 'Asia/Tokyo');
   job.start();
