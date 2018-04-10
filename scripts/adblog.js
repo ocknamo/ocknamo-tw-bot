@@ -8,7 +8,15 @@
 const urls = [
 	'おっぱい',
   'おっぱお',
-  'https://www.youtube.com/watch?v=llI1rGWLjc8'
+  'https://www.youtube.com/watch?v=llI1rGWLjc8',
+  'http://crypt.hatenadiary.jp/entry/2018/03/17/005150',
+  'http://crypt.hatenadiary.jp/entry/2018/03/09/232913',
+  'http://crypt.hatenadiary.jp/entry/2018/03/09/011831',
+  'http://crypt.hatenadiary.jp/entry/2018/02/27/013142',
+  'http://crypt.hatenadiary.jp/entry/2018/02/20/000915',
+  'http://crypt.hatenadiary.jp/entry/2018/02/16/190000',
+  'http://crypt.hatenadiary.jp/entry/2018/04/08/000528',
+  'http://crypt.hatenadiary.jp/entry/2018/03/15/000820'
 ]
 // 定期処理するオブジェクトを宣言
 var CronJob = require('cron').CronJob;
