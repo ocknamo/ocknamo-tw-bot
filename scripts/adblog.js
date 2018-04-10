@@ -16,7 +16,10 @@ const urls = [
   'http://crypt.hatenadiary.jp/entry/2018/02/20/000915',
   'http://crypt.hatenadiary.jp/entry/2018/02/16/190000',
   'http://crypt.hatenadiary.jp/entry/2018/04/08/000528',
-  'http://crypt.hatenadiary.jp/entry/2018/03/15/000820'
+  'http://crypt.hatenadiary.jp/entry/2018/03/15/000820',
+  'http://www.ocknamo.com/entry/2017/05/22/014615',
+  'http://www.ocknamo.com/entry/2017/01/09/222255',
+  'http://www.ocknamo.com/entry/2016/11/11/040226'
 ]
 // 定期処理するオブジェクトを宣言
 var CronJob = require('cron').CronJob;
@@ -27,7 +30,7 @@ function url(){
 module.exports = (robot) => {
 // 定期実行時に呼ばれるメソッド
 var job = new CronJob('0 0 0,3,6,9,12,15,18,21 * * *', function() {
-    robot.send('ocknamo_tw_bot', 'BOTちゃん「 ' + url() + '」');
+    robot.send('ocknamo_tw_bot', '定期BOT「 ' + url() + '」');
   }, null, true, 'Asia/Tokyo');
   job.start();
 };
