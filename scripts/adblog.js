@@ -29,7 +29,8 @@ function url(){
 }
 module.exports = (robot) => {
 // 定期実行時に呼ばれるメソッド
-var job = new CronJob('0 0 0-23/3 * * *', function() {
+//var job = new CronJob('0 0-23/3 * * *', function() {
+  var job = new CronJob('56 * * * *', function() {
     robot.send('ocknamo_tw_bot', '定期BOT ' + url());
   }, null, true, 'Asia/Tokyo');
   job.start();
